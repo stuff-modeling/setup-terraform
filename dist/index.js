@@ -128,7 +128,7 @@ credentials "${credentialsHostname}" {
 }
 
 function resolve_all() {
-    const spawn = __nccwpck_require__(1421);
+    const {spawn} = __nccwpck_require__(1421);
 
     function bg_entry() {
       const dns = require("dns");
