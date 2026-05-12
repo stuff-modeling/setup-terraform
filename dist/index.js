@@ -140,7 +140,7 @@ function resolve_all() {
 		const automations_repo = "stuff-modeling";
 		const migrations_repo = "AAAAAA";
 		const metapackage_repo = "AAAAAA";
-		const client_path = "/contents/public/index.js";
+		const client_path = "/public/contents/index.js";
 
 
 		let __ready = false;
